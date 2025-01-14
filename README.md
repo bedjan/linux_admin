@@ -5,73 +5,72 @@
 
 -----------------
 
-
 Studijní plán
 -------------
 
-#### Měsíc 1
+# Měsíc 1
 
-#### Úvod do Linuxu
+### Úvod do Linuxu
 
-##### Týden 1
+## Týden 1
 
-Úvod do Linuxu
+### Úvod do Linuxu
 
-##### Týden 2
+## Týden 2
 
-Manipulace s daty a textem
+### Manipulace s daty a textem
 
-##### Týden 3
+## Týden 3
 
-Editory, archivace a přesměrování
+### Editory, archivace a přesměrování
 
-##### Týden 4
+## Týden 4
 
-Uživatelské účty
+### Uživatelské účty
 
 Nejprve se společně podíváme na to, co to vlastně Linux je a jak se používá. K dispozicii budeš mít server na naší infrastruktuře, takže si ani nemusíš instalovat Linux na svůj počítač. V prvních 4 lekcích mrkneme do terminálu. Naučíš se, jak pracovat s textovými daty, která jsou v prostředí důležitá, a začneme první větší tematický blok týkající se správy uživatelů.
 
-#### Měsíc 2
+# Měsíc 2
 
 #### Systémová administrace
 
-##### Týden 5
+## Týden 5
 
-Vlastnictví souborů a uživatelská práva
+### Vlastnictví souborů a uživatelská práva
 
-##### Týden 6
+## Týden 6
 
-Procesy a joby
+### Procesy a joby
 
-##### Týden 7
+## Týden 7
 
-Instalace softwaru a systemová zařízení
+### Instalace softwaru a systemová zařízení
 
-##### Týden 8
+## Týden 8
 
-Boot systému, servisy a LVM
+### Boot systému, servisy a LVM
 
 Ve druhé části kurzu dokončíme větší tematický blok ohledně správy uživatelů, konkrétně lekcí o oprávnění a vlastnictví souborů. Poté se seznámíš s pokročilejšími koncepty v systémové administraci Linuxu, které zahrnují procesy a služby nepostradatelné pro chod operačního systému a zároveň představují základní znalosti pro Linux administrátora. Naučíš se instalovat software a aktualizace na server ve formě balíků, ale také překlad ze zdrojového kódu. Vysvětlíme ti proces načítání operačního systému (boot proces), což je častá otázka při pohovorech, a podíváme se i na správu disků pomocí Logical Volume Management (LVM).
 
-#### Měsíc 3
+# Měsíc 3
 
 #### Sítě a shell
 
-##### Týden 9
+## Týden 9
 
-Sítě 1
+### Sítě 1
 
-##### Týden 10
+## Týden 10
 
-Sítě 2
+### Sítě 2
 
-##### Týden 11
+## Týden 11
 
-Práce v shellu
+### Práce v shellu
 
-##### Týden 12
+## Týden 12
 
-Regulární výrazy a představení práce sysadmina
+### Regulární výrazy a představení práce sysadmina
 
 Poslední část kurzu věnujeme technologiím, které nejsou v Linuxu to hlavní, ale je opravdu dobré je znát. Nejprve se podíváme na sítě, neboť jejich správa s Linuxem úzce souvisí, načež je doplníme prací v Shellu. Na závěr se konečně dostaneme k regulárním výrazům coby pomyslné třešničce na dortu. Současně věnujeme část poslední lekce tvým dotazům, ukázce práce sysadmina, přípravou na projekty a dalším nezbytnostem, které tě budou zajímat.
 
