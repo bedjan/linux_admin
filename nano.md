@@ -1,299 +1,297 @@
-Cheatsheet for GNU nano      
+Přehled zkratek pro nano editor
+=====================================
 
-Overview of nano's shortcuts        
-====================================
+### Stisky kláves editoru a jejich funkce
 
-### The editor's keystrokes and their functions             
 
-  
 
-**File handling**
+**Manipulace se soubory**
 
-Ctrl+S   
+Ctrl+S
 
-Save current file
+Uložit aktuální soubor
 
 Ctrl+O
 
-Offer to write file ("Save as")
+Nabídka zápisu souboru ("Uložit jako")
 
 Ctrl+R
 
-Insert a file into current one
+Vložte soubor do aktuálního
 
 Ctrl+X
 
-Close buffer, exit from nano
+Zavřete vyrovnávací paměť, opusťte nano
 
-  
-**Editing**
 
-Ctrl+K   
+**Editace**
 
-Cut current line into cutbuffer
+Ctrl+K
+
+Ořízněte aktuální řádek do cutbufferu
 
 Alt+6
 
-Copy current line into cutbuffer
+Zkopírujte aktuální řádek do cutbufferu
 
 Ctrl+U
 
-Paste contents of cutbuffer
+Vložte obsah cutbufferu
 
 Ctrl+\]
 
-Complete current word
+Doplňte aktuální slovo
 
 Alt+3
 
-Comment/uncomment line/region
+Komentář/odkomentování řádku/oblasti
 
 Alt+U
 
-Undo last action
+Vrátit zpět poslední akci
 
 Alt+E
 
-Redo last undone action
+Znovu proveďte poslední vrácenou akci
 
-  
-**Search and replace**
 
-Ctrl+B    
+**Vyhledat a nahradit**
 
-Start backward search
+Ctrl+B
+
+Spusťte zpětné vyhledávání
 
 Ctrl+F
 
-Start forward search
+Spusťte dopředné vyhledávání
 
 Alt+B
 
-Find next occurrence backward
+Najít další výskyt pozpátku
 
 Alt+F
 
-Find next occurrence forward
+Najít další výskyt vpřed
 
 Alt+R
 
-Start a replacing session
+Zahajte výměnnou relaci
 
-  
-**Deletion**
+
+**Vymazání**
 
 Ctrl+H
 
-Delete character before cursor      
+Smazat znak před kurzorem
 
 Ctrl+D
 
-Delete character under cursor
+Smazat znak pod kurzorem
 
 Alt+Bsp
 
-Delete word to the left
+Smazat slovo vlevo
 
-Ctrl+Del   
+Ctrl+Del
 
-Delete word to the right
+Smazat slovo vpravo
 
 Alt+Del
 
-Delete current line
+Smazat aktuální řádek
 
-  
-**Operations**
 
-Ctrl+T   
+**Operace**
 
-Execute some command
+Ctrl+T
+
+Proveďte nějaký příkaz
 
 Ctrl+T Ctrl+S
 
-Run a spell check
+Spusťte kontrolu pravopisu
 
 Ctrl+T Ctrl+Y
 
-Run a syntax check
+Spusťte kontrolu syntaxe
 
-Ctrl+T Ctrl+O  
+Ctrl+T Ctrl+O
 
-Run a formatter
+Spusťte formátovač
 
 Tab
 
-Indent marked region
+Odsadit označenou oblast
 
-Shift+Tab   
+Shift+Tab
 
-Unindent marked region
+Zrušit odsazení označené oblasti
 
 Ctrl+J
 
-Justify paragraph or region
+Zarovnat odstavec nebo oblast
 
 Alt+J
 
-Justify entire buffer
+Zarovnat celou vyrovnávací paměť
 
 Alt+T
 
-Cut until end of buffer
+Řezejte až do konce pufru
 
 Alt+:
 
-Start/stop recording of macro      
+Spuštění/zastavení záznamu makra
 
 Alt+;
 
-Replay macro
+Přehrát makro
 
-  
 
-**Moving around**
+
+**Pohybovat se**
 
 **←**
 
-One character backward
+Jeden znak dozadu
 
-**→**
+***→**
 
-One character forward
+Jedna postava vpřed
 
 Ctrl+**←**
 
-One word backward
+Jedno slovo vzad
 
-Ctrl+**→**
+Ctrl+***→**
 
-One word forward
+Jedno slovo vpřed
 
 Ctrl+A
 
-To start of line
+Na začátek řádku
 
 Ctrl+E
 
-To end of line
+Na konec řádku
 
 Ctrl+P
 
-One line up
+Jedna řada nahoru
 
 Ctrl+N
 
-One line down
+O řádek níže
 
 Ctrl+**↑**
 
-To previous block
+K předchozímu bloku
 
 Ctrl+**↓**
 
-To next block
+Do dalšího bloku
 
-Alt+Home  
+Alt+Home
 
-To first row in viewport
+Na první řádek ve výřezu
 
-Alt+End
+Alt+Konec
 
-To last row in viewport
+Na poslední řádek ve výřezu
 
 Ctrl+Y
 
-One page up
+O stránku výš
 
 Ctrl+V
 
-One page down
+O stránku níže
 
 Alt+\\
 
-To top of buffer
+Na vrchol vyrovnávací paměti
 
 Alt+/
 
-To end of buffer
+Na konec vyrovnávací paměti
 
-  
-**Special movement**
 
-Alt+G     
+**Speciální pohyb**
 
-Go to specified line
+Alt+G
+
+Přejděte na určený řádek
 
 Alt+\]
 
-Go to complementary bracket
+Přejděte na doplňkovou závorku
 
 Alt+**↑**
 
-Scroll viewport up
+Posuňte výřez nahoru
 
 Alt+**↓**
 
-Scroll viewport down
+Posuňte výřez dolů
 
 Alt+<
 
-Switch to preceding buffer
+Přepněte na předchozí vyrovnávací paměť
 
 Alt+>
 
-Switch to succeeding buffer
+Přepněte na následující vyrovnávací paměť
 
-  
-**Information**
 
-Ctrl+C   
+**Informace**
 
-Report cursor position
+Ctrl+C
+
+Nahlásit polohu kurzoru
 
 Alt+D
 
-Report line/word/character counts
+Uveďte počet řádků/slov/znaků
 
 Ctrl+G
 
-Display help text
+Zobrazit text nápovědy
 
-  
-**Various**
 
-Alt+A     
+**Různé**
 
-Set or unset the mark
+Alt+A
+
+Nastavte nebo zrušte nastavení značky
 
 Alt+V
 
-Enter next keystroke verbatim
+Zadejte další stisk doslovně
 
 Alt+C
 
-Turn constant position info on/off
+Zapnutí/vypnutí informací o konstantní poloze
 
 Alt+N
 
-Turn line numbers on/off
+Zapnout/vypnout čísla řádků
 
 Alt+P
 
-Turn visible whitespace on/off
+Zapnout/vypnout viditelné bílé znaky
 
 Alt+S
 
-Turn softwrapping on/off
+Zapnutí/vypnutí softwrappingu
 
 Alt+X
 
-Hide/unhide the help lines
+Skrýt/zobrazit pomocné řádky
 
 Alt+Z
 
-Hide/unhide the info bars
+Skrýt/odkrýt informační lišty
 
 Ctrl+L
 
-Refresh the screen
+Obnovte obrazovku
