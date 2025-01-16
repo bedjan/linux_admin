@@ -79,3 +79,5 @@ Poslední část kurzu věnujeme technologiím, které nejsou v Linuxu to hlavn�
 #### Projektová certifikace (dobrovolná)
 
 V průběhu Akademie budeš pracovat na komplexních sadách úloh určených systémovým administrátorům. Sadám úloh říkáme projekty a k řešení každého projektu dostaneš individuální zpětnou vazbu od lektorů. Jakmile lektoři přijmou všechny tvé projekty, je certifikát tvůj. Máš čas až 6 měsíců od první lekce, do té doby můžeš projekty odevzdávat s neomezeným počtem pokusů a o certifikát se žádá online skrze výukový portál. Pokud o certifikát nestojíš, projekty vypracovávat nemusíš.
+
+[Linux cli programy](https://dev.to/lissy93/cli-tools-you-cant-live-without-57f6)
