@@ -1,6 +1,3 @@
-#!/usr/bin/env mdsh
-# Skript v Markdownu
-
 ```bash
 
 
