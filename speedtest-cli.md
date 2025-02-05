@@ -14,6 +14,4 @@ curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.
 sudo apt-get install speedtest
 ```
 
-```markdown
-### aha
-```
+
