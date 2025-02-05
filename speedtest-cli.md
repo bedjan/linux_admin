@@ -1,3 +1,6 @@
+
+<code>
+
 ## If migrating from prior bintray install instructions please first...
 # https://www.speedtest.net/apps/cli
 # sudo rm /etc/apt/sources.list.d/speedtest.list
@@ -9,3 +12,5 @@
 sudo apt-get install curl
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 sudo apt-get install speedtest
+
+</code>
