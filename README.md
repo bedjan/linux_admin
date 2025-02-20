@@ -3,6 +3,8 @@
 [Linux admin engeto](https://engeto.cz/product/detail-terminu-linux-akademie-28-4-14-7-2025/)
 
 
+28. dubna – 14. července 2025
+    
 -----------------
 
 Studijní plán
