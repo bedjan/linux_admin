@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# chmod +x restartovani_sluzby.sh
+# ./restartovani_sluzby.sh
+# v cronu # */5 * * * * /restartovani_sluzby.sh
+
 echo "Restartovani apache2"
 
 SERVICE="apache2"
