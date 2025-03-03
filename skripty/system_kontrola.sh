@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# spusteni konkretniho skriptu # system_kontrola.sh vymazani_cache
+
 # Detekce operačního systému (Debian, CentOS, Arch Linux)
 OS="$(grep -Ei "^(ID|ID_LIKE)=" /etc/os-release | awk -F= '{print $2}' | tr -d '"')"
 
