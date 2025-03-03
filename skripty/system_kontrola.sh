@@ -2,6 +2,8 @@
 
 # spusteni konkretniho skriptu # system_kontrola.sh vymazani_cache
 
+#!/bin/bash
+
 # Detekce operačního systému (Debian, CentOS, Arch Linux)
 OS="$(grep -Ei "^(ID|ID_LIKE)=" /etc/os-release | awk -F= '{print $2}' | tr -d '"')"
 
@@ -52,32 +54,31 @@ kontrola_sitoveho_pripojeni() {
     ping -c 4 8.8.8.8
 }
 
-# ========================== SPRÁVA BALÍČKŮ ==========================
-instalace_balicku() {
-    read -p "Zadejte název balíčku k instalaci: " PKG
-    case $OS in
-        debian|ubuntu) sudo apt install -y $PKG ;;
-        centos|rhel) sudo yum install -y $PKG ;;
-        arch) sudo pacman -S --noconfirm $PKG ;;
-    esac
+# ========================== SPRÁVA ZASEKÁVÁNÍ SERVERU ==========================
+ukonceni_nejnarocnejsi_aplikace() {
+    echo "📌 Hledám nejvíce zatěžující procesy..."
+    TOP_PID=$(ps -eo pid,%cpu,%mem,cmd --sort=-%cpu | head -n 2 | tail -n 1 | awk '{print $1}')
+    echo "🔴 Ukončuji proces: $TOP_PID"
+    sudo kill -9 $TOP_PID
+    echo "✅ Proces byl ukončen."
 }
 
-odebrani_balicku() {
-    read -p "Zadejte název balíčku k odebrání: " PKG
-    case $OS in
-        debian|ubuntu) sudo apt remove -y $PKG ;;
-        centos|rhel) sudo yum remove -y $PKG ;;
-        arch) sudo pacman -R --noconfirm $PKG ;;
-    esac
+nejvetsi_soubor() {
+    echo "📌 Hledám největší soubor v systému..."
+    find / -type f -exec du -Sh {} + 2>/dev/null | sort -rh | head -n 1
 }
 
-vyhledani_balicku() {
-    read -p "Zadejte název balíčku k vyhledání: " PKG
-    case $OS in
-        debian|ubuntu) apt search $PKG ;;
-        centos|rhel) yum search $PKG ;;
-        arch) pacman -Ss $PKG ;;
-    esac
+# ========================== SPRÁVA UŽIVATELŮ ==========================
+vytvoreni_uzivatele() {
+    read -p "Zadejte uživatelské jméno: " USERNAME
+    sudo adduser $USERNAME
+    echo "✅ Uživatel $USERNAME byl vytvořen."
+}
+
+odstraneni_uzivatele() {
+    read -p "Zadejte uživatelské jméno k odstranění: " USERNAME
+    sudo deluser $USERNAME
+    echo "✅ Uživatel $USERNAME byl odstraněn."
 }
 
 # ========================== SPRÁVA FIREWALLU ==========================
@@ -96,31 +97,6 @@ restart_firewall() {
     echo "✅ Firewall byl restartován."
 }
 
-# ========================== SPRÁVA SÍTĚ ==========================
-zobrazeni_ip() {
-    echo "📌 Zobrazení IP adresy..."
-    ip a
-}
-
-restart_sitoveho_pripojeni() {
-    echo "📌 Restartování síťového připojení..."
-    sudo systemctl restart networking
-    echo "✅ Síť restartována."
-}
-
-# ========================== SPRÁVA UŽIVATELŮ ==========================
-vytvoreni_uzivatele() {
-    read -p "Zadejte uživatelské jméno: " USERNAME
-    sudo adduser $USERNAME
-    echo "✅ Uživatel $USERNAME byl vytvořen."
-}
-
-otstraneni_uzivatele() {
-    read -p "Zadejte uživatelské jméno k odstranění: " USERNAME
-    sudo deluser $USERNAME
-    echo "✅ Uživatel $USERNAME byl odstraněn."
-}
-
 # ========================== INTERAKTIVNÍ MENU ==========================
 while true; do
     echo ""
@@ -132,15 +108,12 @@ while true; do
     echo "5) Kontrola zatížení CPU a RAM"
     echo "6) Kontrola využití disku"
     echo "7) Kontrola síťového připojení"
-    echo "8) Instalace balíčku"
-    echo "9) Odebrání balíčku"
-    echo "10) Vyhledání balíčku"
-    echo "11) Nastavení firewallu"
-    echo "12) Restart firewallu"
-    echo "13) Zobrazení IP adresy"
-    echo "14) Restart síťového připojení"
-    echo "15) Vytvoření nového uživatele"
-    echo "16) Odstranění uživatele"
+    echo "8) Ukončení nejvíce zatěžující aplikace"
+    echo "9) Hledání největšího souboru"
+    echo "10) Vytvoření nového uživatele"
+    echo "11) Odstranění uživatele"
+    echo "12) Nastavení firewallu"
+    echo "13) Restart firewallu"
     echo "0) Ukončit skript"
 
     read -p "Zadej číslo akce: " VOLBA
@@ -153,15 +126,12 @@ while true; do
         5) kontrola_zateze ;;
         6) kontrola_disku ;;
         7) kontrola_sitoveho_pripojeni ;;
-        8) instalace_balicku ;;
-        9) odebrani_balicku ;;
-        10) vyhledani_balicku ;;
-        11) nastaveni_firewallu ;;
-        12) restart_firewall ;;
-        13) zobrazeni_ip ;;
-        14) restart_sitoveho_pripojeni ;;
-        15) vytvoreni_uzivatele ;;
-        16) otstraneni_uzivatele ;;
+        8) ukonceni_nejnarocnejsi_aplikace ;;
+        9) nejvetsi_soubor ;;
+        10) vytvoreni_uzivatele ;;
+        11) odstraneni_uzivatele ;;
+        12) nastaveni_firewallu ;;
+        13) restart_firewall ;;
         0) echo "👋 Ukončuji skript."; exit ;;
         *) echo "❌ Neplatná volba. Zkus to znovu!" ;;
     esac
